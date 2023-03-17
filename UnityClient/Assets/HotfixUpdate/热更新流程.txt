@@ -1,0 +1,22 @@
+https://blog.csdn.net/s178435865/article/details/128604693
+
+1.项目打包：
+	生成Lua桥接c#的关联代码到Res目录中
+	拷贝LuaScripts到Assets/Res/目录中（Lua相关代码一般放在Assets同级）
+	根据分类打包策略生成AssetsBundle资源包，并生成新的资源版本号、资源索引文件和资源表，将生成文件放到StreamingAssets目录下。
+	资源索引文件，包括资源名+资源生成AssetsBundle的Bundle名
+	资源表内容是，项目中的资源名+资源生成的md5码
+2.上传新版本资源到资源服务器
+3.检测热更：(独立的热更新资源场景，放在母包中)
+	将资源版本文件从StreamingAssets文件夹copy出来放到PersistentDataPath文件夹中
+	（StreamingAssets只读不能写，PersistentDataPath在安装Apk后生成所以只能copy后对比）
+	对比大版本的版本号，版本号不同，提示重新下载安装包
+	小版本不同对比资源差异，对比资源名，极其md5文件，将去除的资源删掉，新的资源和md5不同的资源从资源服务器下载下来覆盖本地。
+4.热更完成后，同步最新的资源版本号到本地资源版本文件中
+5.继续游戏流程，检测权限 -> 调用XLua启动文件
+6.游戏主要逻辑结构是通过Lua调用的，Lua控制核心功能，但功能实现都是使用C#，Lua只负责调用。
+7.一般在活动、限时商店等后期运营相关的功能模块会使用lua是实现业务逻辑，方便热修。其他方法想要热修需要在指定文件内对c#代码进行重写，被重写的c#方法，在被调用时Lua会修改调用的位置为修改的Lua代码
+8.运行时资源加载部分
+	首先加载AssetBundleManifest文件，这里包含整个Bundle的依赖关系。
+	加载资源索引文件，通过这个文件可以快速找到想要加载的资源在哪个Bundle中
+	先通过Manifest加载资源依赖Bundle然后再加载所需Bundle，再从Bundle中加载资源

@@ -1,0 +1,32 @@
+启动游戏 => 初始化 LuaManager
+1.初始化LuaManager
+	1.1.创建Lua状态机LuaState
+	1.2.整合初始代码
+		给LuaState传入Lua框架，创建起始模块
+		注册Lua类，注册可调用的C#方法
+		例：LuaState.BeginStaticLibs("Debugger");//注册类
+			LuaState.RegFunction("Log", Log);//注册方法
+			LuaState.RegFunction("LogWarning", LogWarning);//注册属性
+			LuaState.EndStaticLibs();//结束注册
+		这里需要注册Debug、UI组件、类型、扩展工具、UI框架、事件注册模块、单例、json、	配置表、音频、网络、GameObject初始化...
+		例：LuaState.RegFunction("UICallBack", UICallBack);
+			LuaState.BeginModule("UnityEngine");
+			UnityEngine_GameObjectWrap.Register(LuaState);
+			UnityEngine_TransformWrap.Register(LuaState);
+			UnityEngine_ComponentWrap.Register(LuaState);
+			UnityEngine_BehaviourWrap.Register(LuaState);
+			UnityEngine_MonoBehaviourWrap.Register(LuaState);
+		UnityEngine_Vector4Wrap.Register(LuaState);
+	1.3.LoadLua，先取出所有Lua库文件执行，再取出所有的Lua文件并执行
+	1.4.启动Lua，LuaState.GetFunction(“Main”).Call();
+2.Lua调用，在游戏主流程的Update调用LuaUpdate
+	GameManager判断是否时Lua模块然后调用Lua，Lua执行完或需要调用C#方法时调用LuaState注册好的的方法和类。
+	
+	Lua脚本示例
+	function Main( ... )
+		print("hello print");
+		warn("hello warn");
+		UIManager.OpenUIWindow("AAAWindow",nil);
+		--warn("warn");
+		--error("error");
+	end

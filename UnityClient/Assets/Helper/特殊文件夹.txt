@@ -1,0 +1,7 @@
+1.Editor
+	编辑文件夹
+2.Editor Default Resources
+	该文件夹需要放在Assets根目录下，用来存储编辑器所需要的图片等资源，书写的时候需要注意中间有空格隔开。此文件夹也不会被打包，访问方法为：EditorGUIUtility.Load()
+当然，也可以在Editor文件夹内创建一个Resources文件夹，将相关资源放在该文件夹内，通过Resources.Load()获取资源，也是可以的
+3.Gizmos
+	该文件夹也需要放在Assets根目录下，可以用来存放Gizmos.DrawIcon()的图片资源

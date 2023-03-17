@@ -1,0 +1,21 @@
+Proto vs Flat
+	Flat的特点是读取时不需要转换/解包操作可直接读取
+
+对比：
+	数据量大小：Proto比Flat小一倍左右
+	生成代码量：Flat较少
+	序列化耗时：持平
+	反序列化：Flat优于Proto一倍以上,Flat很快
+	CPU占用：FlatBuffer优
+	GC：Flat垃圾回收较少，GC次数比Proto少了至少一半
+
+Protobuf使用技巧
+	提高数据压缩率，消息字段数量不要超过15个
+	少使用int32和int64，正数使用uint，负数使用sint
+	int32和int64大小最好在0-127
+	
+FlatBuffer使用技巧
+	unit类在没有unsigned int等类型的语言取值会扩展为long处理，轻易不要使用
+	变量值位0时压缩能力会更强
+	
+文章引用：https://juzii.gitee.io/2020/03/02/protobuf-vs-flatbuffer/
