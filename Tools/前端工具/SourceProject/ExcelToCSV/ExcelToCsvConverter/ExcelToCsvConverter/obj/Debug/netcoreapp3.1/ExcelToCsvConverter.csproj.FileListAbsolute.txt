@@ -1,0 +1,17 @@
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\bin\Debug\netcoreapp3.1\ExcelToCsvConverter.exe
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\bin\Debug\netcoreapp3.1\ExcelToCsvConverter.deps.json
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\bin\Debug\netcoreapp3.1\ExcelToCsvConverter.runtimeconfig.json
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\bin\Debug\netcoreapp3.1\ExcelToCsvConverter.runtimeconfig.dev.json
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\bin\Debug\netcoreapp3.1\ExcelToCsvConverter.dll
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\bin\Debug\netcoreapp3.1\ExcelToCsvConverter.pdb
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\bin\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\obj\Debug\netcoreapp3.1\ExcelToCsvConverter.csproj.AssemblyReference.cache
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\obj\Debug\netcoreapp3.1\Interop.Microsoft.Office.Interop.Excel.dll
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\obj\Debug\netcoreapp3.1\ExcelToCsvConverter.csproj.ResolveComReference.cache
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\obj\Debug\netcoreapp3.1\ExcelToCsvConverter.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\obj\Debug\netcoreapp3.1\ExcelToCsvConverter.AssemblyInfoInputs.cache
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\obj\Debug\netcoreapp3.1\ExcelToCsvConverter.AssemblyInfo.cs
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\obj\Debug\netcoreapp3.1\ExcelToCsvConverter.csproj.CoreCompileInputs.cache
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\obj\Debug\netcoreapp3.1\ExcelToCsvConverter.dll
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\obj\Debug\netcoreapp3.1\ExcelToCsvConverter.pdb
+D:\Projects\WorkPool\Tools\前端工具\SourceProject\ExcelToCSV\ExcelToCsvConverter\ExcelToCsvConverter\obj\Debug\netcoreapp3.1\ExcelToCsvConverter.genruntimeconfig.cache
