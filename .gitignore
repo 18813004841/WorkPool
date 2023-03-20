@@ -5,3 +5,5 @@
 /UnityClient/Library/SourceAssetDB
 /UnityClient/Library/ArtifactDB
 /UnityClient/Library
+/UnityClient/.vs
+/UnityClient/obj
