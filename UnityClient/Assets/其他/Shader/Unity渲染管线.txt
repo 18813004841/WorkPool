@@ -1,0 +1,9 @@
+Unity渲染管线
+1.Built-in 渲染管线：
+	这是 Unity 最早的渲染管线，它是基于传统的固定管线（Fixed Function Pipeline）实现的。就是Unity自带的Built-in库，但是它的渲染效果相对较差，不适合高端游戏。(值得入手学习)
+2.Universal 渲染管线（URP）：
+	这是 Unity 新推出的一种轻量级渲染管线，有较好的渲染效果和更高的性能。URP 支持多种平台，包括 PC、主机、移动设备等，并且可以使用 Shader Graph 进行可视化着色器编辑。
+3.High Definition Render Pipeline（HDRP）：
+	这是 Unity 中的高保真渲染管线，适用于制作高质量游戏和应用。HDRP 支持 PBR（Physically Based Rendering）材质系统，可以呈现逼真的光照和阴影效果，并且可以使用 Visual Effect Graph 进行高级特效制作。
+4.Unity Shader:（详见UnityShader.txt）
+	使用 Unity ShaderLab 语言进行编写，基于 CG 和 HLSL，可以使用着色器图形（Shader Graph）进行可视化编辑，可以被用于多种不同的渲染管线中如 Unity 的 Built-in、URP、HDRP等。
