@@ -5,18 +5,17 @@ using UnityEngine;
 
 public class 动态规划 : MonoBehaviour
 {
-    public List<int> _arr;
-    public int aim;
-
     [Header("死循环检测")]
     public int OutError = 100;
     private int CurStep = 0;
 
+    [Header("输入")]
+    public string ParamStr1 = "";
+
     [ContextMenu("动态规划")]
     void Main()
     {
-        CurStep = 0;
-        Debug.Log(MinMoney(_arr, aim));
+        CheckChildList();
     }
 
     #region 数字转字符串
@@ -84,6 +83,39 @@ public class 动态规划 : MonoBehaviour
     }
     #endregion
 
+    #region 最长上升子序列
+    //给定一个长度为 n 的数组 arr，求它的最长严格上升子序列的长度。
+    //所谓子序列，指一个数组删掉一些数（也可以不删）之后，形成的新数组。例如[1, 5, 3, 7, 3] 数组，其子序列有：[1,3,3]、[7] 等。但[1, 6]、[1,3,5] 则不是它的子序列。
+    //输入：[6,3,1,5,2,3,7]
+    //返回值：4
+    //说明：该数组最长上升子序列为[1, 2, 3, 7] ，长度为4
+    public void CheckChildList()
+    {
+        int[] arr = ParamStr1.ToIntArray();
+
+        int[] dp = new int[arr.Length + 1];
+
+        int maxLength = 0;
+
+        dp[1] = 1;
+
+        for (int i = 2; i <= arr.Length; i++)
+        {
+            for (int j = 1; j < i; j++)
+            {
+                if (arr[j-1] < arr[i-1])
+                {
+                    dp[i] = Mathf.Max(dp[i], dp[j]);
+                }
+            }
+            dp[i] += 1;
+            maxLength = Mathf.Max(dp[i], maxLength);
+        }
+
+        Debug.Log(maxLength);
+    }
+    #endregion
+    
     private bool CheckOut()
     {
         CurStep += 1;
@@ -92,5 +124,19 @@ public class 动态规划 : MonoBehaviour
             Debug.LogError("死循环");
         }
         return CurStep > OutError;
+    }
+}
+
+public static class DGTools
+{
+    public static int[] ToIntArray(this string str)
+    {
+        string[] strs = str.Split(',');
+        int[] arr = new int[strs.Length];
+        for (int i = 0; i < strs.Length; i++)
+        {
+            arr[i] = int.Parse(strs[i]);
+        }
+        return arr;
     }
 }
