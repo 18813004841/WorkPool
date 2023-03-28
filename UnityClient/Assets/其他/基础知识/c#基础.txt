@@ -1,0 +1,19 @@
+1.值类型和引用类型
+	值类型存储在内存栈中，引用类型存储在内存堆中并在内存栈中存储指向堆的地址。
+	值类型的存取快，表示数据的实际值，在赋值上传值，引用类型传引用。
+	栈内存自动释放，堆内存是GC释放。
+2.ArrayList、List<T>、Dictionary的区别存储方式
+	ArrayList并不安全，会将所有的数据当作Object来处理会出现装箱拆箱的操作
+	List继承自ArrayList。
+	ArrayList、Dictionary底层都是由数组实现的对数据的存储。
+	麻烦的是在新增数据时会涉及到扩容的问题。ArrayList扩容是按照原有大小的一倍扩大，Dictionary自己定义了一套扩容的系数来实现每次的扩容大小。
+	扩容后是通过c++的 Array.copy将原有数据存储到新得数组中。
+	因此这两种方式在添加数据时都会开辟更多的冗余空间，想要避免可以尝试用数组实现，或者提前做好预估的扩容（可以直接调用设置其空间大小的api）
+3.Foreach优化
+	Foreach是创建迭代器，导致额外的性能开销。
+	可以采用for循环遍历Dictionary的KeyValuePair<TKey, TValue>
+	或者使用while循环来调用MoveNext()
+4.字符串优化
+	在对int等类型做字符串拼接显示的时候要调用其ToString操作避免装箱拆卸
+	在做字符串的拼接修改上可使用临时的StringBuilder来做避免大量创建String
+

@@ -7,18 +7,18 @@ namespace 动态规划
 {
     public class a动态规划入口 : MonoBehaviour
     {
-        [Header("死循环检测")]
-        public int OutError = 100;
-        private int CurStep = 0;
+        public static int OutError = 1000;
+        private static int CurStep = 0;
 
         [Header("输入")]
         public string ParamStr1 = "";
+        public string ParamStr2 = "";
 
         [ContextMenu("动态规划")]
         void Main()
         {
-            最长回文子串 temp = new 最长回文子串();
-            int value = temp.GetLength(ParamStr1);
+            数字字符串转化成IP地址 temp = new 数字字符串转化成IP地址();
+            string value = temp.RestoreIpAddresses(ParamStr1);
             Debug.Log(value);
         }
 
@@ -120,7 +120,7 @@ namespace 动态规划
         }
         #endregion
 
-        private bool CheckOut()
+        public static bool CheckOut()
         {
             CurStep += 1;
             if (CurStep > OutError)

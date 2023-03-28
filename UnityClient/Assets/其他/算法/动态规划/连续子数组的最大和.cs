@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,6 +25,7 @@ namespace 动态规划
                 dp[i] = Mathf.Max(dp[i - 1] + array[i], array[i]);
                 maxValue = Mathf.Max(dp[i], maxValue);
             }
+
             return maxValue;
         }
     }

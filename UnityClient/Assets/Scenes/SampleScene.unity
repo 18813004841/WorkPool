@@ -342,5 +342,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03aaca0d747400f4cb12945764329304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OutError: 100
-  ParamStr1: -10
+  ParamStr1: 1AB2345CD
+  ParamStr2: 1B2345EF

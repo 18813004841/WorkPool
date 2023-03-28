@@ -1,0 +1,22 @@
+https://zhuanlan.zhihu.com/p/547036011?utm_source=wechat_session&utm_medium=social&s_r=0
+Lua,ILRuntime, HybridCLR(wolong)/huatuo热更对比分析
+
+1.Lua解决方案：
+	内置Lua虚拟机，导出c#对应的Lua代码。
+2.ILRuntime解决方案：
+	内置.net字节码解释器，解释执行.net字节码。
+3.HybridCLR:
+	在il2cpp中装在.net字节码，解释执行.net的字节码功能
+4.对比：
+	4.1.代码热更范围
+		4.1.1.Lua方案
+			内置Lua虚拟机，使用Lua开发的脚本都可以热更，对待C#代码要做hotfix的热更补丁，而且需要事先对c#代码打标记。很麻烦有时会出线无发热更的问题，修改线上问题要在c#和lua两边修改，lua修改起来费时费力。
+		4.1.2.ILRuntime/purets
+			内置.net解释器，在热更项目中的代码都可以热更，普通代码无法热更。
+		4.1.3.HybridCLR
+			在il2cpp中内置.net解释器，同时把.net里面的数据映射到narive的数据对象
+			可以任意热更c#代码，将需要热更的C#代码所在dll装在到il2cpp vm 就可以执行。
+	4.2.性能对比
+		CLR使用native代码直接运行，Lua/purets/ILRuntime都是解释执行热更代码,native的性能更好。
+	4.3.开发效率
+		CLR和ILRuntime都是纯c#，效果更好
