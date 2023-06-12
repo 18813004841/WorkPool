@@ -1,0 +1,6 @@
+寻路算法：
+	1.D-Star(D*)算法，适用于动态场景
+	2.A-Star(A*)算法，适用于静态场景
+	3.Dijkstra算法，适用于静态场景
+	4.Jump Point Search，高级算法不了解
+	5.Sampling Based算法，基于采样算法
