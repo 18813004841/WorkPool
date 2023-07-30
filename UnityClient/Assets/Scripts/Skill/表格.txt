@@ -1,0 +1,50 @@
+Skill表:
+ID
+Type
+Icon
+Des
+SkillTarget:技能释放目标（单体，前方，目标地点，全队，随机目标点）
+SkillBGType:技能需要展示的立绘样式（治疗类，攻击类，控制类等展示例会背景不一样）
+CastType:释放类型（对目标释放，对地点释放）
+EffectRangeType:释放范围（围绕技能所有者附近， 目标附近，释放者前方所有，特殊类）
+PathFindType:寻路方式（立即释放，走到距离足够后释放，走到技能可覆盖到目标后释放）
+CD
+Hatred:技能产生的仇恨值
+BeginSfx:初始特效
+BeginSfx1:前摇特效
+HitSfx：受击特效
+MarkSfx: 标记特效
+Bullect: 飞行元件
+AnimId: 动画Id
+PreAnimType: 前摇动画
+PreAnimTime: 前摇动作时间
+Buffs:造成的buff/debuff列表
+BuffSelf:给自己添加的buff
+CanDeadVakud：释放者死后是否有效
+Param1:
+Param2:
+Param3:
+Param10:
+CameraType:摄影机类型（是否需要聚焦之类的）
+
+
+Buff表
+ID
+Type
+BuffPriority：优先级
+BuffLevel
+BuffGroup
+IgnoreImmunityAdd：无视免疫添加
+CanBeRemove：是否可被驱散
+SkillGCDRemove: 是否根据GCD移除
+BeginSfx：起始特效
+BuffsfxBeginTime：特效出现时间点
+BuffSfx: Buff特效
+CanReplace：是否可替换
+CanRefresh: 是否可刷新
+OvelappedLimit: 叠加层数
+Cantransmit：是否会死亡传递
+ShouldBeCleanedWhendDead: 死亡时是否清楚
+BattleEndNotRemove: 战斗结束后是否移除
+Param1:
+Param2:
